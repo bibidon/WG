@@ -1,1 +1,91 @@
-﻿
+﻿$Black: #000;
+$White: #fff;
+$TextSize: 10px;
+
+@mixin linkA{
+	text-decoration: none;
+	color: $White;
+	font-size: 14px;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+}
+
+.firstTem{
+	margin: 15px;
+	padding: 15px;
+	
+	.text{
+		font-size: 15px;
+		font-weight: bold;
+	}
+
+	.sel{
+		display: block;
+		margin: 15px 0;
+		font-size: $TextSize;
+		font-weight: bold;
+	}
+
+	.el{
+		background: $Black;
+		color: $White;
+		font-size: $TextSize;
+		display: inline;
+		margin: 0 20px 10px 0;
+		padding: 8px 0 8px 8px;
+
+		.beforeLk{
+			font-size: 14px;
+			margin-left: 20px;
+		}
+
+		a{
+			margin: 0 8px;
+			@include linkA;
+		}
+	}
+
+	form{ 
+		.greenBtn{
+			border: none;
+			background: #9CA85A;
+			font-size: $TextSize;
+			cursor: pointer;
+			margin: 30px 0 0 0;
+			padding: 18px;
+		}
+	}
+		}
+
+.win{
+	width: 500px;
+	background: #3F3F3F;
+	color: $White;
+	font-size: 12px;
+	position: absolute;
+	left: 700px;
+	top: 300px;
+	padding: 15px;
+
+	@media screen and (max-width: 60em){
+		left: 300px;  
+	}
+
+	a{
+		position: absolute;
+		right: 20px;
+		@include linkA;
+	}
+
+	form{
+		margin-top: 40px; 
+	}
+
+	.sh{
+		margin-right: 10px; 
+	}
+}

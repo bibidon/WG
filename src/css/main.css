@@ -1,3 +1,90 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\0000311}}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
 
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\0000317}}
+.firstTem {
+  margin: 15px;
+  padding: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\0000321}}
+.firstTem .text {
+  font-size: 15px;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\0000326}}
+.firstTem .sel {
+  display: block;
+  margin: 15px 0;
+  font-size: 10px;
+  font-weight: bold;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\0000333}}
+.firstTem .el {
+  background: #000;
+  color: #fff;
+  font-size: 10px;
+  display: inline;
+  margin: 0 20px 10px 0;
+  padding: 8px 0 8px 8px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\0000341}}
+.firstTem .el .beforeLk {
+  font-size: 14px;
+  margin-left: 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\0000346}}
+.firstTem .el a {
+  margin: 0 8px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\0000353}}
+.firstTem form .greenBtn {
+  border: none;
+  background: #9CA85A;
+  font-size: 10px;
+  cursor: pointer;
+  margin: 30px 0 0 0;
+  padding: 18px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\0000364}}
+.win {
+  width: 500px;
+  background: #3F3F3F;
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+  left: 700px;
+  top: 300px;
+  padding: 15px;
+}
+@media screen and (max-width: 60em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\0000364}}
+  .win {
+    left: 300px;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\0000378}}
+.win a {
+  position: absolute;
+  right: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\0000384}}
+.win form {
+  margin-top: 40px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\0000388}}
+.win .sh {
+  margin-right: 10px;
+}
 
 /*# sourceMappingURL=main.css.map */

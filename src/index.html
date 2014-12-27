@@ -5,10 +5,44 @@
     <link rel="stylesheet" href="css/main.css" />
     <script data-main="js/main" src="../bower_components/requirejs/require.js"></script>
 </head>
-
 <body>
-    <script type="text/x-handlebars-tamplate">
-            
+
+    <script type="text/x-handlebars-template">
+        <div class="firstTem">
+            <span class="text">Выбор элементов</span>
+            <span class="sel">На данный момент у вас выбрано {{el}} элемента:</span>
+            <form >
+                <input class="greenBtn" type="button" value="Изменить мой выбор" />
+            </form>
+        </div>
     </script>
+
+    <script type="text/x-handlebars-template">
+         <div class="el">
+                Элемент {{number}} <span class="beforeLk">|</span><a href="#">x</a>
+            </div>
+    </script>
+
+    <script type="text/x-handlebars-template">
+        
+    </script>
+
+    <div class="win">
+        Диалог выбора элементов
+        <a href="#">x</a>
+        <form>
+            Поиск
+            <!--<span class="sh">Поиск</span>-->
+            <input type="search" />
+            Фильтр
+            <!--<span>Фильтр</span>-->
+            <select size="3" name="filter">
+                <option disabled>Без фильтра</option>
+                <option value="fil10">Номер > 10</option>
+                <option value="fil100">Номер > 100</option>
+                <option value="fil200">Номер > 200</option>
+            </select>
+        </form>
+    </div>
 </body>
 </html>
