@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <script type="text/x-handlebars-template">
+    <script type="text/x-handlebars-template" id="defaultWin">
         <div class="firstTem">
             <span class="text">Выбор элементов</span>
             <span class="sel">На данный момент у вас выбрано {{el}} элемента:</span>
@@ -17,32 +17,52 @@
         </div>
     </script>
 
-    <script type="text/x-handlebars-template">
-         <div class="el">
+    <script type="text/x-handlebars-template" id="choiceEl">
+         <div class="{{class}}">
                 Элемент {{number}} <span class="beforeLk">|</span><a href="#">x</a>
             </div>
     </script>
 
-    <script type="text/x-handlebars-template">
-        
-    </script>
-
-    <div class="win">
-        Диалог выбора элементов
-        <a href="#">x</a>
-        <form>
-            Поиск
-            <!--<span class="sh">Поиск</span>-->
-            <input type="search" />
-            Фильтр
-            <!--<span>Фильтр</span>-->
-            <select size="3" name="filter">
-                <option disabled>Без фильтра</option>
+    <script type="text/x-handlebars-template" id="dialog">
+        <div class="win">
+        <div class="top">
+            <p>Диалог выбора элементов</p>
+            <a href="#">x</a>
+        </div>
+        <form class="shAndFilForm">
+            <p>Поиск</p>
+            <input class="sh" type="search" />
+            <p>Фильтр</p>
+            <select class="fil" name="filter">
+                <option selected="selected">Без фильтра</option>
                 <option value="fil10">Номер > 10</option>
                 <option value="fil100">Номер > 100</option>
                 <option value="fil200">Номер > 200</option>
             </select>
         </form>
+        <div class="check">
+            <form class="chForm">
+                <input type="checkbox checked" />{{checkOne}}<br />
+                <input type="checkbox checked" />{{checkTwo}}<br />
+                <input type="checkbox checked" />{{checkThree}}<br />
+                <input type="checkbox" />{{checkFour}}<br />
+                <input type="checkbox" />{{checkFive}}<br />
+                <input type="checkbox" />{{checkSix}}<br />
+                <input type="checkbox" />{{checkSeven}}<br />
+                <input type="checkbox" />{{checkEight}}<br />
+                <input type="checkbox" />{{checkNine}}<br />
+            </form>
+        </div>
+        <p class="afterEl">Выбранные элементы на данный момент:</p>
+        <div class="btn">
+            <form>
+                <input class="greenBtnSC" type="button" value="Сохранить" />
+            </form>
+            <form>
+                <input class="greenBtnSC" type="button" value="Отмена" />
+            </form>
+        </div>
     </div>
+    </script>
 </body>
 </html>
