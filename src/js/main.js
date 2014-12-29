@@ -1,8 +1,9 @@
-﻿requirejs.congig({
+﻿requirejs.config({
     paths: {
         jquery: "../../bower_components/jquery/dist/jquery",
         backbone: "../../bower_components/backbone/backbone",
-        underscore: "../../bower_components/underscore/underscore"
+        underscore: "../../bower_components/underscore/underscore",
+        handlebars: "../../bower_components/handlebars/handlebars"
     },
     shim: {
         "underscore": { exports: "_" },
