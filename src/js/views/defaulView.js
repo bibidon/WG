@@ -1,4 +1,4 @@
-﻿define(["jquery", "backbone", "underscore", "handlebars", "models/data"], function ($, Backbone, _, Handlebars, data) {
+﻿define(["jquery", "backbone", "underscore", "handlebars", "models/data", 'views/dialogWinView'], function ($, Backbone, _, Handlebars, data, Dil) {
 
     var defaul = { 'el': '3 элемента' };
     var choiceTwo = { 'el': '2 элемента' };
@@ -26,6 +26,14 @@
                 this.$el.html(this.template(choiceOne));
                 return this;
             }
+        },
+
+        events: {
+            'click .greenBtn': 'supplementaryMethod'
+        },
+
+        supplementaryMethod: function () {
+            var dialog = new Dil();
         }
     });
 

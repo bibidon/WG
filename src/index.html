@@ -41,15 +41,6 @@
         </form>
         <div class="check">
             <form class="chForm">
-                <input type="checkbox checked" />{{checkOne}}<br />
-                <input type="checkbox checked" />{{checkTwo}}<br />
-                <input type="checkbox checked" />{{checkThree}}<br />
-                <input type="checkbox" />{{checkFour}}<br />
-                <input type="checkbox" />{{checkFive}}<br />
-                <input type="checkbox" />{{checkSix}}<br />
-                <input type="checkbox" />{{checkSeven}}<br />
-                <input type="checkbox" />{{checkEight}}<br />
-                <input type="checkbox" />{{checkNine}}<br />
             </form>
         </div>
         <p class="afterEl">Выбранные элементы на данный момент:</p>
@@ -62,6 +53,10 @@
             </form>
         </div>
     </div>
+    </script>
+
+    <script type="text/x-handlebars-template" id="check">
+         <input type="checkbox checked" />{{check}}<br />
     </script>
 </body>
 </html>

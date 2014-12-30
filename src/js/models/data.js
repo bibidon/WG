@@ -1,6 +1,12 @@
 ﻿define(['backbone'], function (Backbone) {
 
+    var counter = false;
     var count = 3;
+    var el = 'def';
+    //if (counter === false) {
+    //    count = 3;
+    //}
+
     var dodata = function () {
         var mas = [];
         var el = 'Элемент';
@@ -25,6 +31,7 @@
     });
 
     return {
+        el: el,
         count: count,
         dodata: dodata,
         Model: Model,
