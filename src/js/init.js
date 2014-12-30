@@ -1,9 +1,10 @@
-﻿define(['models/data', 'views/defaulView'], function (data, DefV) {
+﻿define(['models/data', 'views/defaulView', 'views/elView'], function (data, DefV, ElV) {
 
     var init = (function () {
 
         var that = null;
         var appViewdefaul;
+        var choiseElView;
 
         var model = function () {
             that = this;
@@ -14,10 +15,19 @@
 
             render: function () {
                 that.defaulRender();
+                if (data.count === 3) {
+                    for (var i = 0; i < data.count; i++) {
+                        that.elView();
+                    }
+                }
             },
 
             defaulRender: function () {
                 appViewdefaul = new DefV();
+            },
+
+            elView: function () {
+                choiseElView = new ElV();
             }
         };
 
