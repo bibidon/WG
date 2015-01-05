@@ -107,20 +107,22 @@ p {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\00003145}}
 .win .check .chForm {
+  height: 230px;
+  overflow-y: scroll;
   margin-top: 20px;
-  padding: 15px 10px;
+  padding: 15px 10px 7px 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\00003149}}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\00003151}}
 .win .check .chForm input[type='checkbox'] {
   margin-bottom: 10px;
   margin-right: 10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\00003156}}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\00003158}}
 .win .afterEl {
   display: block;
   margin-bottom: 15px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\00003161}}
+@media -sass-debug-info{filename{font-family:file\:\/\/d\:\/HTML\/WG\/src\/sass\/_base\.scss}line{font-family:\00003163}}
 .win .elWin {
   background: #000;
   font-size: 12px;

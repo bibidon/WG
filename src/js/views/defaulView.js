@@ -1,4 +1,4 @@
-﻿define(["jquery", "backbone", "underscore", "handlebars", "models/data", 'views/dialogWinView'], function ($, Backbone, _, Handlebars, data, Dil) {
+﻿define(["jquery", "backbone", "underscore", "handlebars", "models/data", 'views/dialogWinView', 'views/cbView'], function ($, Backbone, _, Handlebars, data, Dil, Ch) {
 
     var defaul = { 'el': '3 элемента' };
     var choiceTwo = { 'el': '2 элемента' };
@@ -34,6 +34,7 @@
 
         supplementaryMethod: function () {
             var dialog = new Dil();
+            var cBox = new Ch();
         }
     });
 
