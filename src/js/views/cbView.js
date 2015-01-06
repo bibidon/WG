@@ -12,7 +12,14 @@
 
         render: function () {
             for (var i = 0; i < 300; i++) {
-                $('.chForm').append(this.template);
+                if (i < 3) {
+                    $('.chForm').append(this.template);
+                    $('[type=checkbox]:lt(3)').each(function (indx, el) {
+                        el.setAttribute('checked', 'true');
+                    });
+                } else {
+                    $('.chForm').append(this.template);
+                }
             }
             return this;
         }

@@ -9,13 +9,13 @@
 
     var dodata = function () {
         var mas = [];
-        var el = 'Элемент';
+        var el = 'Элемент ';
         for (var i = 0; i < 300; i++) {
             mas.push(el + i);
         }
 
         return mas;
-    };
+    }();
 
 
     var Model = Backbone.Model.extend({
