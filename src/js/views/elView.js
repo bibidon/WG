@@ -11,12 +11,31 @@
             this.render();
         },
 
+        //renderDef: function () {
+        //    var nameAt = [];
+        //    $('.el').each(function (ind, el) {
+        //        var at = el.getAttribute('name');
+        //        nameAt.push(at);
+        //    });
+        //    for (var i = 0; i < 3; i++) {
+        //        for (var j = 0; j < 3; j++) {
+        //            if (name[j] === service.masSup[i]) {
+
+        //            }
+        //        }
+        //    }
+        //},
+
         render: function () {
             if ($('.el').length === 0) {
                 $('.sel').after(this.template(this.defMethod()));
+                //$('.el').attr('name', service.defId[0]);
+                //service.defId.shift();
                 return this;
             } else {
                 $('.el:last').after(this.template(this.defMethod()));
+                //$('.el:last').attr('name', service.defId[0]);
+                //service.defId.shift();
                 return this;
             }
         },
