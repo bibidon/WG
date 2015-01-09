@@ -6,7 +6,7 @@
     var dodata = function () {
         var mas = [];
         var el = 'Элемент ';
-        for (var i = 0; i < 300; i++) {
+        for (var i = 1; i < 301; i++) {
             mas.push(el + i);
         }
 

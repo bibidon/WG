@@ -7,35 +7,16 @@
         template: Handlebars.compile($('#choiceEl').html()),
 
         initialize: function () {
-            this.collection = new data.Col(service.mas);
+            //this.collection = new data.Col(service.mas);
             this.render();
         },
-
-        //renderDef: function () {
-        //    var nameAt = [];
-        //    $('.el').each(function (ind, el) {
-        //        var at = el.getAttribute('name');
-        //        nameAt.push(at);
-        //    });
-        //    for (var i = 0; i < 3; i++) {
-        //        for (var j = 0; j < 3; j++) {
-        //            if (name[j] === service.masSup[i]) {
-
-        //            }
-        //        }
-        //    }
-        //},
 
         render: function () {
             if ($('.el').length === 0) {
                 $('.sel').after(this.template(this.defMethod()));
-                //$('.el').attr('name', service.defId[0]);
-                //service.defId.shift();
                 return this;
             } else {
                 $('.el:last').after(this.template(this.defMethod()));
-                //$('.el:last').attr('name', service.defId[0]);
-                //service.defId.shift();
                 return this;
             }
         },
@@ -47,26 +28,40 @@
         supplementaryMethod: function (event) {
             if (event.target.nodeName === 'A') {
                 var ev = event.target.parentElement;
+                var id = ev.innerHTML.match(/\d/);
+                var idNum = Number(id);
+                service.mas[idNum - 1].checked = false;
                 $(ev).remove();
-                var numberEl = service.quantityEl();
-                var temp = service.statusDef[numberEl - 1];
-                var vw = new DefV(temp);
+                var vw = new DefV();
             }
         },
 
-        defMethod: function () {
-            var i = service.counter();
-            var defEl = {};
-            if (data.el === 'def') {
-                defEl.class = 'el';
-                defEl.number = service.mas[i].id;
-            }
-            if (data.el === 'win') {
-                defEl.class = 'elWin';
-                defEl.number = service.mas[i].id;
-            }
+        //copyMas: function () {
+        //    var cMas = service.mas.slice(0);
+        //    return cMas;
+        //},
 
-            return defEl;
+        defMethod: function () {
+            //var mass = this.copyMas();
+            var defEl = {};
+            for (var i = 0; i < service.copy.length; i++) {
+                if (service.copy[i].checked === true) {
+                    if (data.el === 'def') {
+                        defEl.class = 'el';
+                        defEl.number = service.copy[i].id;
+                        defEl.ch = service.copy[i].checked;
+                        //service.checkedEl.push(mass[i]);
+                        service.copy[i].checked = false;
+                        return defEl;
+
+                    }
+                    if (data.el === 'win') {
+                        defEl.class = 'elWin';
+                        defEl.number = service.mas[i].id;
+                        defEl.ch = service.mas[i].checked;
+                    }
+                }
+            }
         }
     });
 
