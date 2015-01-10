@@ -7,7 +7,7 @@
         template: Handlebars.compile($('#choiceEl').html()),
 
         initialize: function () {
-            //this.collection = new data.Col(service.mas);
+            this.collection = new data.Col(data.dodata);
             this.render();
         },
 

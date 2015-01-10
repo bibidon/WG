@@ -1,4 +1,4 @@
-﻿define(["models/data", "views/defaulView", "views/elView", "service" ], function (data, DefV, ElV, service) {
+﻿define(["models/data", "views/defaulView", "views/elView", "service"], function (data, DefV, ElV, service) {
 
     var init = (function () {
 
@@ -23,7 +23,7 @@
             },
 
             defaulRender: function () {
-                appViewdefaul = new DefV(service.statusDef[2]);
+                appViewdefaul = new DefV();
             },
 
             elView: function () {
