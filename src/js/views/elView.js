@@ -7,18 +7,26 @@
         template: Handlebars.compile($('#choiceEl').html()),
 
         initialize: function () {
-            this.collection = new data.Col(data.dodata);
-            this.render();
+            this.collection = service.elementData;
+            this.choiseRender();
         },
 
-        render: function () {
+        render: function (item) {
             if ($('.el').length === 0) {
-                $('.sel').after(this.template(this.defMethod()));
+                $('.sel').after(this.template(item.toJSON()));
                 return this;
             } else {
-                $('.el:last').after(this.template(this.defMethod()));
+                $('.el:last').after(this.template(item.toJSON()));
                 return this;
             }
+        },
+
+        choiseRender: function () {
+            _.each(this.collection.models, function (item) {
+                if (item.get('checked') === true) {
+                    this.render(item);
+                }
+            }, this);
         },
 
         events: {
@@ -26,42 +34,11 @@
         },
 
         supplementaryMethod: function (event) {
-            if (event.target.nodeName === 'A') {
-                var ev = event.target.parentElement;
-                var id = ev.innerHTML.match(/\d/);
-                var idNum = Number(id);
-                service.mas[idNum - 1].checked = false;
-                $(ev).remove();
-                var vw = new DefV();
-            }
-        },
-
-        //copyMas: function () {
-        //    var cMas = service.mas.slice(0);
-        //    return cMas;
-        //},
-
-        defMethod: function () {
-            //var mass = this.copyMas();
-            var defEl = {};
-            for (var i = 0; i < service.copy.length; i++) {
-                if (service.copy[i].checked === true) {
-                    if (data.el === 'def') {
-                        defEl.class = 'el';
-                        defEl.number = service.copy[i].id;
-                        defEl.ch = service.copy[i].checked;
-                        //service.checkedEl.push(mass[i]);
-                        service.copy[i].checked = false;
-                        return defEl;
-
-                    }
-                    if (data.el === 'win') {
-                        defEl.class = 'elWin';
-                        defEl.number = service.mas[i].id;
-                        defEl.ch = service.mas[i].checked;
-                    }
-                }
-            }
+            var ev = event.target.parentElement;
+            var evId = $(ev).text().match(/\d{1,4}/)[0];
+            this.collection.get(evId).set('checked', false);
+            $(ev).remove();
+            var newDefView = service.doDefView();
         }
     });
 

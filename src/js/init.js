@@ -15,11 +15,7 @@
 
             render: function () {
                 that.defaulRender();
-                if (data.count === 3) {
-                    for (var i = 0; i < data.count; i++) {
-                        that.elView();
-                    }
-                }
+                that.elView();
             },
 
             defaulRender: function () {

@@ -7,8 +7,8 @@
         template: Handlebars.compile($('#defaultWin').html()),
 
         initialize: function () {
-            this.dataCollection = new data.Col(data.dodata);
-            this.collection = new defData.Col(defData.statusDef);
+            this.dataCollection = service.elementData;
+            this.collection = service.defaulData;
             this.choiseRender();
         },
 
